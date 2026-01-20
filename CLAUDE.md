@@ -16,8 +16,8 @@ The contents of this repository form a custom Messaging System tuned to the mark
 - **Messaging Commands:** specific tasks such as market research, competitive research, and segment research, executed within the context of the Messaging System.
 - **Messaging Agents:** subagents that Claude Code may execute during a session for tasks that should run with their own isolated context window. 
 
-### Messaging House Elements
-The Messaging House in `/messaging` consists of the following documents:
+### Messaging House Components
+The Messaging House in `/messaging` consists of the following documents which provide detailed messaging blocks:
 
 | Component   | File           | Purpose                                |
 |-------------|----------------|----------------------------------------|
@@ -32,22 +32,34 @@ The Messaging House in `/messaging` consists of the following documents:
 | Plays       | plays.md       | GTM motions and campaign strategies    |
 | Preferences | preferences.md | Writing tone, style, and voice         |
 
-### Messaging Skills Available
-The Messaging Skills in `.claude/skills` include the following asset types:
+For specific elements that have many instances (i.e. multiple personas), individual profiles are located in subdirectories and referenced from the main element document. These include:
+
+| Element      | Location                   | 
+|--------------|----------------------------|
+| Categories   | /messaging/categories/*    | 
+| Competitors  | /messaging/competitors/*   | 
+| Personas     | /messaging/personas/*      |
+| Products     | /messaging/products/*      |
+| Segments     | /messaging/segments/*      |  
+| Solutions    | /messaging/solutions/*     |  
+
+
+### Skills Available
+Claude Skills are located in `.claude/skills` and are built to support the following asset types:
 
 | Skill              | Location                          | Asset Type                 |
 |--------------------|-----------------------------------|----------------------------|
 | email-copywriting  | .claude/skills/email-copywriting  | Emails and Email Sequences |
 | blog-copywriting   | .claude/skills/blog-copywriting   | Topical and Tech Blogs     |
-| brief-copywriting  | .claude/skills/brief-copywriting  | Solutions and one-Pagers   |
+| brief-copywriting  | .claude/skills/brief-copywriting  | Solutions and One-Pagers   |
 
-## Following the Task Workflow
+## Task Workflow
 
 *Note: The user should begin this workflow in Plan mode*
 
 1. Evaluate the inputs to define the scenario - the type of messaging ask (campaign, launch, etc.), which elements are in play (persona, product, etc.), and what content to generate (email, blog, etc.) 
 2. Invoke the `AskUserQuestion` tool to clarify the scenario and/or close any gaps from the provided input
-3. Read the elements of the Messaging House in `/messaging` to understand messaging instructions, tips, rules, and guidelines based on the defined scenario
+3. Read the components and specific elements of the Messaging House in `/messaging` to understand messaging instructions, tips, rules, and guidelines based on the defined scenario
 4. Invoke the `WebSearch` tool to perform outside market and competitive research to enrich your understanding with real-time intelligence
 5. Generate a comprehensive Plan in the format of a Messaging Brief that includes: The Scenario, Key Messages, and Content Assets. The user should accept the Plan before proceeding.
 6. Based on the content assets, load the respective Skill(s) located in `.claude/skills` for guided instructions, output format, evaluation criteria, and examples to follow.

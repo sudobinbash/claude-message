@@ -8,7 +8,7 @@ description: Create insightful, research-driven blog content including thought l
 ## Instructions
 
 1. **Identify Blog Type:** Determine from user input which type applies
-2. **Load Type Guide:** Read the corresponding file from [blog-types/](blog-types/)
+2. **Load Type Guide:** Read the corresponding file from `blog-types/`
 3. **Review the Brief:** Session should include messaging brief with target audience, thesis, and objectives
 4. **Reference Messaging House:** Extract relevant context from `/messaging` using the table below
 5. **Conduct Research:** Use WebSearch for real-time market intelligence, competitive analysis, data validation
@@ -20,11 +20,11 @@ description: Create insightful, research-driven blog content including thought l
 
 After identifying the blog type, load the corresponding guide:
 
-- **Thought Leadership:** See [blog-types/thought-leadership.md](blog-types/thought-leadership.md)
-- **Use Case Deep Dive:** See [blog-types/use-case-deep-dive.md](blog-types/use-case-deep-dive.md)
-- **Threat Research:** See [blog-types/threat-research.md](blog-types/threat-research.md)
-- **Data Study:** See [blog-types/data-study.md](blog-types/data-study.md)
-- **Product Announcement:** See [blog-types/product-announcement.md](blog-types/product-announcement.md)
+- **Thought Leadership:** See `blog-types/thought-leadership.md`
+- **Use Case Deep Dive:** See `blog-types/use-case-deep-dive.md`
+- **Threat Research:** See `blog-types/threat-research.md`
+- **Data Study:** See `blog-types/data-study.md`
+- **Product Announcement:** See `blog-types/product-announcement.md`
 
 ## Messaging House Context
 

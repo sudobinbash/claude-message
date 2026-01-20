@@ -81,54 +81,6 @@ Claude will use this to calibrate depth, sequencing, and expectations in messagi
 [Format:
 1–2 sentences describing typical stage of readiness]
 
-### Persona Profiles
-
-Personas are the specific people we aim to speak directly to with our messaging. 
-
-[Instructions:
-Document each persona as a distinct profile. Personas should be grounded in real responsibilities, pressures, and motivations. Avoid generic demographic or personality-based descriptions that have no impact to your solution.
-
-Claude will use persona profiles to ensure messaging is relevant to pain points, wants, and needs, and flies at the right altitude in terms of the buying process.]
-
-[Tips:
-– Each persona should represent a meaningful decision-making role
-– A useful mental model is to ask what this person is "on the hook for" and what they are "on the hunt for".
-- Frame value messaging as: Current State → Desired State → How to Get There → Why Only Us]
-
-[Format:
-For each persona, include:
-
-- Label: a clear indentifier that indicates role and level - i.e. Security Executives
-- Titles: list the specific job titles that align to the profile
-- Roles & Responsibilities: define what this persona owns, influences, and is accountable for. Keep this practical and jobs-to-be-done oriented.
-- Relevant Signals: describe the conditions, behaviors, or buying patterns that indicate this persona is motivated to act.
-- Key Messages: list the value messages that consistently resonate with this persona.]
-
-### Segment Profiles
-
-Segments define company-level groupings that carry specific considerations beyond what is already covered across the ICP and core messaging elements.
-
-[Note: 
-Only create Segments when you need additional contextual clarifiers - i.e. compliance regulations, regional differences, scale implications, etc. This isn't Segments for your territory planning, it's for your messaging.]
-
-[Instructions:
-Document each segment as a distinct profile. Segments should capture what changes in context and why, with messaging appropriately tuned.
-
-Claude will use this section to customize messaging based on certain conditions that only apply to select segments.]
-
-[Tips:
-– If a segment does not meaningfully change messaging, there's no need to create a profile
-– Call out why a specific segment-based attribute matters when crafting messaging 
-– Segments should be additive to ICP, not duplicative]
-
-[Format:
-For each segment, include:
-
-- Label: a clear identifier that indicates the contextual characteristics - i.e. Hub & Spoke Organizations with Centralized IT Departments
-- Characteristics: describe the specific conditions that materially affect messaging in this segment. Focus on constraints, risks, or priorities that differ from the ICP baseline
-- Relevant Signals: describe observable company-level signals that indicate this context is in play and messaging should be adapted
-- Key Messages: specify how messaging should shift for this segment. This may include changes in emphasis, proof points, language, or examples, but not changes the core value propositions.]
-
 ### Customer Journey
 
 The Customer Journey defines how messaging should evolve over time as the audience's awareness, evaluation, adoption, and advocacy evolve. 
@@ -167,6 +119,40 @@ Key Messages
 
 Proof Types
 (Trends, insights, analogies, third-party perspectives)]
+
+### Persona Profiles
+
+Personas are the specific people we aim to speak directly to with our messaging - from executives to practitioners. 
+
+When specific personas are related to your task workflow, extract the respective profile in `/messaging/personas/` for in-depth messaging.
+
+| Persona   | File           | 
+|-----------|----------------|
+| Persona A | persona-a.md   |
+| Persona B | persona-b.md   |
+| Persona C | persona-c.md   |
+
+[Instructions:
+List the specific personas that apply to your GTM. Personas should be grounded in real responsibilities, pressures, and motivations. Avoid generic demographic or personality-based descriptions that have no impact to your solution. For each persona, carve out a distinct profile in `/messaging/personas/[persona-name].md`
+
+Claude will use persona profiles to ensure messaging is relevant to pain points, wants, and needs, and flies at the right altitude in terms of the buying process.]
+
+### Segment Profiles
+
+Segments define company-level groupings that carry specific considerations beyond what is already covered across the ICP and core messaging elements.
+
+When specific segments are related to your task workflow, extract the respective profile in `/messaging/segments/` for in-depth messaging.
+
+| Segment   | File           | 
+|-----------|----------------|
+| Segment A | segment-a.md   |
+| Segment B | segment-b.md   |
+| Segment C | segment-c.md   |
+
+[Instructions:
+List specific company segments that carry particular messaging considerations. Only create Segments when you need additional contextual clarifiers - i.e. compliance regulations, regional differences, scale implications, etc. This isn't Segments for your territory planning, it's for your messaging. For each segment, carve out a distinct profile in `/messaging/segments/[segment-name].md`
+
+Claude will use this section to customize messaging based on certain conditions that only apply to select segments.]
 
 ## Rules
 

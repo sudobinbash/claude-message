@@ -8,7 +8,7 @@ description: Create sales enablement and marketing collateral including solution
 ## Instructions
 
 1. **Identify Brief Type:** Determine which type applies to the request
-2. **Load Type Guide:** Read the corresponding file from [brief-types/](brief-types/)
+2. **Load Type Guide:** Read the corresponding file from `brief-types/`
 3. **Review the Brief:** Session should include messaging brief with target audience, objective, and key message
 4. **Reference Messaging House:** Extract specific messaging blocks from `/messaging`
 5. **Conduct Research (If Needed):** Use WebSearch for industry context, competitive positioning, or validation
@@ -19,24 +19,26 @@ description: Create sales enablement and marketing collateral including solution
 
 After identifying the brief type, load the corresponding guide:
 
-- **Solution Brief:** See [brief-types/solution-brief.md](brief-types/solution-brief.md)
-- **Industry Vertical:** See [brief-types/industry-vertical.md](brief-types/industry-vertical.md)
-- **Persona Brief:** See [brief-types/persona-brief.md](brief-types/persona-brief.md)
-- **Product Datasheet:** See [brief-types/product-datasheet.md](brief-types/product-datasheet.md)
-- **Use Case Overview:** See [brief-types/use-case-overview.md](brief-types/use-case-overview.md)
-- **Company Overview:** See [brief-types/company-overview.md](brief-types/company-overview.md)
-- **Event Companion:** See [brief-types/event-companion.md](brief-types/event-companion.md)
+- **Solution Brief:** See `brief-types/solution-brief.md`
+- **Industry Vertical:** See `brief-types/industry-vertical.md`
+- **Persona Brief:** See `brief-types/persona-brief.md`
+- **Product Datasheet:** See `brief-types/product-datasheet.md`
+- **Use Case Overview:** See `brief-types/use-case-overview.md`
+- **Company Overview:** See `brief-types/company-overview.md`
+- **Event Companion:** See `brief-types/event-companion.md`
 
 ## Messaging House Context
 
-| Context Type    | What to Extract                                     | Source                                                                               |
-|-----------------|-----------------------------------------------------|--------------------------------------------------------------------------------------|
-| Persona & Pain  | ICP signals, personas, value messages               | [people.md](/messaging/people.md)                                                    |
-| Voice & Tone    | Narrative, brand voice, style guidelines            | [pitch.md](/messaging/pitch.md), [preferences.md](/messaging/preferences.md)         |
-| Value Messaging | Core propositions, products, solutions              | [proposition.md](/messaging/proposition.md), [portfolio.md](/messaging/portfolio.md) |
-| Market Context  | Industry trends, positioning, competitive landscape | [position.md](/messaging/position.md)                                                |
-| Credibility     | Social proof, customer wins, use cases              | [proof.md](/messaging/proof.md)                                                      |
-| GTM Alignment   | Campaign strategy, motion-specific messaging        | [plays.md](/messaging/plays.md)                                                      |
+Look for the following when referencing messaging elements in `/messaging`:
+
+| Context Type    | What to Extract                                     | Source                         |
+|-----------------|-----------------------------------------------------|--------------------------------|
+| Persona & Pain  | ICP signals, personas, value messages               | people.md                      |
+| Voice & Tone    | Narrative, brand voice, style guidelines            | pitch.md, preferences.md       |
+| Value Messaging | Core propositions, products, solutions              | proposition.md, portfolio.md.  |
+| Market Context  | Industry trends, positioning, competitive landscape | position.md                    |
+| Credibility     | Social proof, customer wins, use cases              | proof.md                       |
+| GTM Alignment   | Campaign strategy, motion-specific messaging        | plays.md                       |
 
 ## Design Principles
 

@@ -48,45 +48,38 @@ Claude will use this as the baseline for differentiation across messaging.]
 ### Categories in Play
 
 [Instructions:
-Explicitly list the market categories you align with or intersect. For each category, define your current position and your strategic intent.
+List the market categories you align with or intersect with. For each category, carve out a distinct profile in `/messaging/categories/[category-name].md`
 
-Claude will use this to perform market research and to understand where you fit relative to the larger market space. Also for keeping messaging relevant to specific categorical contexts when applicable]
-
-[Tips:
-– Be clear about direct and adjacent positioning
-- It's okay for there to be a proverbial venn diagram - this is for context
-– Be honest about your relative position - this isn't a pitch]
-
-[Format:
-For each category:
-– Category Name and acronym
-- Description: 1-2 sentence description of the category
-- Solution: 1-2 sentence description of your solution
-– Current position (1 sentence statement with relative position – Outside, New Entrant, Visionary, Challenger, Leader)
-– Strategic aim (1 sentence statement with the end goal - Lead, Differentiate, Converge, Consume)
+Claude will reference individual categories when performing market research, and to understand where you fit relative to the larger market space. Claude will also use this to keep messaging relevant to specific category contexts when applicable.
 ]
+
+When researching specific categories in your task workflow, extract the details from files in `/messaging/categories/`
+
+| Category             | Source Files     |
+|----------------------|------------------|
+| Category A (Acronym) | category-a.md    |
+| Category B (Acronym) | category-b.md    |
+| Category C (Acronym) | category-c.md    |
 
 ### Competing Alternatives
 
 [Instructions:
-List the alternatives customers evaluate instead of choosing you. This includes vendors, DIY, and inaction. Focus on patterns of choice, not just named competitors - this is scoped to messaging, not your competitive intelligence hub.
+List the alternatives customers evaluate instead of choosing you. This includes vendors, DIY, and inaction. Focus on patterns of choice, not just named competitors - this is scoped to messaging, not your competitive intelligence hub. For each competing alternative, carve out a distinct profile in `/messaging/competitors/[competitor-name].md`
 
-Claude will use this to sharpen contrast, frame trade-offs, and message with clear differentiation.]
+Claude will reference specific alternatives when performing market research, and to understand where you fit relative to the competitive landscape. Claude will also use this to sharpen contrast, frame trade-offs, and message with clear differentiation.]
 
-[Tips:
-– Group vendors by shared characteristics and behaviors - avoid calling out single vendors unless you must
-– Focus messaging on what's uniquely yours
-- Aim to keep this section fresh with the latest research]
+When researching specific alternatives in your task workflow, extract the details from files in `/messaging/competitors/`
 
-[Format:
-For each alternative or alternative group:
-- Label (Common descriptor or specific vendor)
-- Description:
-– Type (Vendor, DIY, Inaction)
-– Current Position (Emerging, Visionary, Challenger, Leader)
-– Our Approach (Beat, Differentiate, Cooperate, Target, Monitor)]
+| Category       | Source Files      |
+|----------------|-------------------|
+| Competitor A   | competitor-a.md   |
+| Competitor B   | competitor-b.md   |
+| Competitor C   | competitor-c.md   |
 
-## Usage Guidelines
+## Rules
+- The positioning statement is authoritative, but not meant to be used as explicit messaging
+
+## Guidelines
 
 - Use the Market Landscape to gain an understanding of the space
 - Use the Positioning Statement to anchor relative positioning and to establish differentiation

@@ -23,54 +23,45 @@ Claude will use this to determine whether to speak at the platform, portfolio, o
 
 ### Product Details
 
-Products are the canonical units of offering within the portfolio.
+Products are the canonical units of offering within the portfolio. 
 
 Reference products intentionally and only when they are relevant to the scenario, persona, or use case.
+
+When specific products are related to your task workflow, extract the respective profile in `/messaging/products/` for in-depth messaging.
+
+| Product   | File           | 
+|-----------|----------------|
+| Product A | product-a.md   |
+| Product B | product-b.md   |
+| Product C | product-c.md   |
 
 [Instructions:
 Document each product as a discrete profile.
 
-Claude will use this to introduce or reference offerings when specificity is required.]
+Claude will use this to introduce or reference specific offerings when applicable.]
 
-[Tips:
-– Include context that is relevant to messaging, not every product detail
-- Be explicit and clear about what the product is capable of
-- Focus value messaging on differentiation]
+### Solutions
 
-[Format:
-For each product, include:
+Solutions are the use cases of the product in practice.
 
-- Product Name: Official product name
-- Description: a concise explanation of what the product does and who it is for
-- Positioning Statement: describe how this product fits in the market
-- Critical Capabilities: list the capabilities that drive value for this product
-- Technical Details: include technical context only when it affects buying, usage, or credibility
-- Link (optional): link to any public-facing web properties for the product for additional reference
-- Documentation (optional): link to any public-facing documentation for additional reference]
+Use these to ground messaging in real jobs-to-be-done scenarios and desired outcomes.
 
-### Use Cases
+When specific solutions are related to your task workflow, extract the respective profile in `/messaging/solutions/` for in-depth messaging.
 
-Use cases are the ways the product is applied in practice.
-
-Use these to ground messaging in real scenarios of jobs-to-be-done and desired outcomes.
+| Solution   | File            | 
+|------------|-----------------|
+| Solution A | solution-a.md   |
+| Solution B | solution-b.md   |
+| Solution C | solution-c.md   |
 
 [Instructions:
-Document repeatable, outcome-oriented scenarios where the portfolio delivers meaningful and measurable value. Use cases may span multiple products or apply to a single product.
+Document repeatable, outcome-oriented solutions where the portfolio delivers meaningful and measurable value. Solutions may span multiple products or apply to a single product. For each solution, carve out a distinct profile in `/messaging/solutions/[solution-name].md`
 
-Claude will use these as tip of the spear messaging.]
+Claude will use these as tip of the spear messaging, and to achor business and technical value to what teams are looking to accomplish.]
 
 [Tips:
-– Aim for use cases that are both hands-on practical for practitioners and valuable to the business
-- When you have a lot of use cases, try to logically group them to avoid messaging sprawl]
-
-[Format:
-For each use case, include:
-
-- Use Case Name: a clear, descriptive label for how the product is used
-- Description: explain the problem being solved and the desired outcome
-- Applicable Products: specify which products in the portfolio apply to this use case
-- Approach: describe your unique method for solving this use case
-- Why We're Different: explain why this use case is only solvable by you]
+– Aim for solutions that are both hands-on practical for practitioners and valuable to the business
+- When you have a lot of solutions, try to logically group them to avoid messaging sprawl]
 
 ## Rules
 

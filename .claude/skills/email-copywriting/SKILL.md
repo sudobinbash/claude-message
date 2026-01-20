@@ -8,7 +8,7 @@ description: Generate high-value, high-converting emails and email sequences for
 ## Instructions
 
 1. **Identify Email Type:** Determine which type applies to the request
-2. **Load Type Guide:** Read the corresponding file from [email-types/](email-types/)
+2. **Load Type Guide:** Read the corresponding file from `email-types/`
 3. **Review the Brief:** Session should include messaging brief with target persona, objective, and key message
 4. **Reference Messaging House:** Extract specific messaging blocks from `/messaging`
 5. **Conduct Research (If Needed):** Use WebSearch for real-time market and competitive intelligence
@@ -19,11 +19,11 @@ description: Generate high-value, high-converting emails and email sequences for
 
 After identifying the email type, load the corresponding guide:
 
-- **Single Outbound:** See [email-types/single-outbound.md](email-types/single-outbound.md)
-- **Outbound Sequence:** See [email-types/outbound-sequence.md](email-types/outbound-sequence.md)
-- **Inbound Sequence:** See [email-types/inbound-sequence.md](email-types/inbound-sequence.md)
-- **Event Promotion:** See [email-types/event-promotion.md](email-types/event-promotion.md)
-- **Product Newsletter:** See [email-types/product-newsletter.md](email-types/product-newsletter.md)
+- **Single Outbound:** See `email-types/single-outbound.md`
+- **Outbound Sequence:** See `email-types/outbound-sequence.md`
+- **Inbound Sequence:** See `email-types/inbound-sequence.md`
+- **Event Promotion:** See `email-types/event-promotion.md`
+- **Product Newsletter:** See `email-types/product-newsletter.md`
 
 ## Messaging House Context
 

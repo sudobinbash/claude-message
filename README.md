@@ -14,7 +14,7 @@ The contents of this repository form the foundational architecture for your own 
 
 ### Messaging House
 
-The Messaging House is a structured model of your positioning and messaging. It covers every aspect of your market space, product offering, and go-to-market engine. The core elements include:
+The Messaging House is a structured model of your positioning and messaging. It covers every aspect of your market space, product offering, and go-to-market engine. The core components include:
 
 - Purpose: your vision and mission
 - Profile: your company foundation
@@ -26,6 +26,15 @@ The Messaging House is a structured model of your positioning and messaging. It 
 - Proof: your evidence of value
 - Plays: your go-to-market
 - Preferences: your brand voice
+
+Within the components, there are specific elements that may contain multiple profiles. To ensure relevancy, carve out dedicated profiles for:
+
+- Categories
+- Competitors
+- Personas
+- Products
+- Segments
+- Solutions
 
 ### Messaging Skills
 
@@ -41,7 +50,7 @@ Messaging Skills are dynamically loaded instructions for Claude Code to follow w
 
 Messaging Commands are specific research tasks you can kick off from the Claude Code CLI. These tasks are executed within the context of the Messaging System, so they are naturally framed and pointed in the right direction. The examples in this repository include:
 
-- Compete Research
+- Competitive Research
 - Initiative Research
 - Market Research
 - Persona Research
