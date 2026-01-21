@@ -4,7 +4,7 @@ argument-hint: [competitor]
 description: Perform competitive research on a specific vendor
 ---
 
-Perform competitive research for Axonius against $ARGUMENTS.
+Perform competitive research for {company} against $ARGUMENTS.
 
 Include:
 
