@@ -47,11 +47,12 @@ For specific elements that have many instances (i.e. multiple personas), individ
 ### Skills Available
 Claude Skills are located in `.claude/skills` and are built to support the following asset types:
 
-| Skill              | Location                          | Asset Type                 |
-|--------------------|-----------------------------------|----------------------------|
-| email-copywriting  | .claude/skills/email-copywriting  | Emails and Email Sequences |
-| blog-copywriting   | .claude/skills/blog-copywriting   | Topical and Tech Blogs     |
-| brief-copywriting  | .claude/skills/brief-copywriting  | Solutions and One-Pagers   |
+| Skill               | Location                           | Asset Type                     |
+|---------------------|------------------------------------|--------------------------------|
+| email-copywriting   | .claude/skills/email-copywriting   | Emails and Email Sequences     |
+| blog-copywriting    | .claude/skills/blog-copywriting    | Topical and Tech Blogs         |
+| brief-copywriting   | .claude/skills/brief-copywriting   | Solutions and One-Pagers       |
+| social-copywriting  | .claude/skills/social-copywriting  | LinkedIn and Twitter/X posts   |
 
 ## Task Workflow
 
@@ -65,6 +66,7 @@ Claude Skills are located in `.claude/skills` and are built to support the follo
 6. Based on the content assets, load the respective Skill(s) located in `.claude/skills` for guided instructions, output format, evaluation criteria, and examples to follow.
 7. For each content asset:
    a. Load the respective Skill located in `.claude/skills` for guided instructions, output format, evaluation criteria, and examples to follow.
+   b. Invoke the `AskUserQuestion` tool for any asset-centric clarifications
    a. Generate the asset following the skill template
    b. Write to `/assets/[descriptor]/[asset-name].md`
    c. **Invoke the `asset-reviewer` subagent** to review the file. Revise if any criterion scores below 70.

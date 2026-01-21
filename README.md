@@ -1,3 +1,17 @@
+██████╗██╗      █████╗ ██╗   ██╗██████╗ ███████╗
+██╔════╝██║     ██╔══██╗██║   ██║██╔══██╗██╔════╝
+██║     ██║     ███████║██║   ██║██║  ██║█████╗  
+██║     ██║     ██╔══██║██║   ██║██║  ██║██╔══╝  
+╚██████╗███████╗██║  ██║╚██████╔╝██████╔╝███████╗
+ ╚═════╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝
+
+███╗   ███╗███████╗███████╗███████╗ █████╗  ██████╗ ███████╗
+████╗ ████║██╔════╝██╔════╝██╔════╝██╔══██╗██╔════╝ ██╔════╝
+██╔████╔██║█████╗  ███████╗███████╗███████║██║  ███╗█████╗  
+██║╚██╔╝██║██╔══╝  ╚════██║╚════██║██╔══██║██║   ██║██╔══╝  
+██║ ╚═╝ ██║███████╗███████║███████║██║  ██║╚██████╔╝███████╗
+╚═╝     ╚═╝╚══════╝╚══════╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
+
 Claude Message is an opinionated, yet customizable messaging framework built around the Claude Code harness. It acts as the positioning and messaging context engine for Claude Code to generate content assets – ensuring the copy always strikes a chord and is uniquely yours.
 
 This is meant for Product Marketers, Founders, and anyone who cares about messaging quality and taste. It's built primarily for B2B companies, but the principles may apply to others.
@@ -43,7 +57,6 @@ Messaging Skills are dynamically loaded instructions for Claude Code to follow w
 - Email Copywriting
 - Social Copywriting
 - Blog Copywriting
-- Web Copywriting
 - Brief Copywriting
 
 ### Messaging Commands
