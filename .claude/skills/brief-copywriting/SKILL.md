@@ -3,6 +3,8 @@ name: brief-copywriting
 description: Create sales enablement and marketing collateral including solution briefs, industry verticals, persona briefs, product datasheets, use case overviews, company overviews, and event companions. Use when the user asks for briefs, one-pagers, datasheets, leave-behinds, sales collateral, or any PDF/document asset for sales or marketing.
 ---
 
+[Note for the user: tune this skill and the asset types to your requirements - this is a generic example as a starting point]
+
 # Brief Copywriting
 
 ## Instructions

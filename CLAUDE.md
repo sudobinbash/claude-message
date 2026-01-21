@@ -32,7 +32,7 @@ The Messaging House in `/messaging` consists of the following documents which pr
 | Plays       | plays.md       | GTM motions and campaign strategies    |
 | Preferences | preferences.md | Writing tone, style, and voice         |
 
-For specific elements that have many instances (i.e. multiple personas), individual profiles are located in subdirectories and referenced from the main element document. These include:
+For specific elements that have many instances (i.e. multiple personas), individual profiles are located in subdirectories located in `/messaging/` and are referenced from the main element document. These include:
 
 | Element      | Location                   | 
 |--------------|----------------------------|

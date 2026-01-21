@@ -3,6 +3,8 @@ name: social-copywriting
 description: Create authentic, high-engagement social content for LinkedIn and Twitter/X including posts, threads, articles, and newsletters. Optimized for platform algorithms and differentiated from generic AI-generated content.
 ---
 
+[Note for the user: tune this skill and the asset types to your requirements - this is a generic example as a starting point]
+
 # Social Copywriting
 
 ## Instructions

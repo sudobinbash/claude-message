@@ -3,6 +3,8 @@ name: blog-copywriting
 description: Create insightful, research-driven blog content including thought leadership, use case guides, threat research, data studies, and product announcements optimized for SEO/GEO and differentiated market positioning
 ---
 
+[Note for the user: tune this skill and the asset types to your requirements - this is a generic example as a starting point]
+
 # Blog Copywriting
 
 ## Instructions

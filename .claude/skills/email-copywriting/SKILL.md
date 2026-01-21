@@ -3,6 +3,8 @@ name: email-copywriting
 description: Generate high-value, high-converting emails and email sequences for outbound prospecting, inbound nurture, event promotion, and product communications targeting specific personas with personalized, brand-consistent messaging. Use when the user asks for email copy, email sequences, outreach templates, or any email marketing asset.
 ---
 
+[Note for the user: tune this skill and the asset types to your requirements - this is a generic example as a starting point]
+
 # Email Copywriting
 
 ## Instructions
