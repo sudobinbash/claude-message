@@ -56,36 +56,70 @@ Claude Skills are located in `.claude/skills` and are built to support the follo
 
 ## Task Workflow
 
-*Note: The user should begin this workflow in Plan mode*
+There are two primary workflows: **Building the Messaging House** and **Generating Content Assets**.
 
-1. Evaluate the inputs to define the scenario - the type of messaging ask (campaign, launch, etc.), which elements are in play (persona, product, etc.), and what content to generate (email, blog, etc.) 
-2. Invoke the `AskUserQuestion` tool to clarify the scenario and/or close any gaps from the provided input
-3. Read the components and specific elements of the Messaging House in `/messaging` to understand messaging instructions, tips, rules, and guidelines based on the defined scenario
-4. Invoke the `WebSearch` tool to perform outside market and competitive research to enrich your understanding with real-time intelligence
-5. Generate a comprehensive Plan in the format of a Messaging Brief that includes: The Scenario, Key Messages, and Content Assets. The user should accept the Plan before proceeding.
-6. Based on the content assets, load the respective Skill(s) located in `.claude/skills` for guided instructions, output format, evaluation criteria, and examples to follow.
-7. For each content asset:
-   a. Load the respective Skill located in `.claude/skills` for guided instructions, output format, evaluation criteria, and examples to follow.
-   b. Invoke the `AskUserQuestion` tool for any asset-centric clarifications
-   a. Generate the asset following the skill template
-   b. Write to `/assets/[descriptor]/[asset-name].md`
-   c. **Invoke the `asset-reviewer` subagent** to review the file. Revise if any criterion scores below 70.
-8. After all assets pass review, perform a final consistency check across the set.
+### Building the Messaging House
+
+Use the orchestrator to build components progressively:
+
+```
+/messaging-orchestrator
+```
+
+Each component follows a 6-step workflow:
+
+1. **Load Context** — Read dependency components + scan `/research/` directory
+2. **Research Gaps** — WebSearch only for information not found locally
+3. **Present Findings** — Summarize what was discovered with sources
+4. **Confirm & Refine** — Ask 2-5 validation questions before drafting
+5. **Generate** — Create blocks following output format
+6. **Validate** — Check against criteria, verify consistency
+
+### Generating Content Assets
+
+*Note: Requires completed Messaging House components*
+
+1. Define the scenario — messaging ask, elements in play, content to generate
+2. Read relevant Messaging House components for context
+3. Load the respective Skill from `.claude/skills`
+4. Generate the asset following the skill template
+5. Write to `/assets/[descriptor]/[asset-name].md`
+6. Invoke the `asset-reader` subagent to review; revise if any criterion scores below 70
+
+### Decision Gates (When to Use AskUserQuestion)
+
+Use `AskUserQuestion` at three strategic points:
+
+| Gate | When | Purpose |
+|------|------|---------|
+| **Scenario Definition** | Before any work | Clarify the ask, elements in scope, desired output |
+| **Findings Validation** | After research, before drafting | Confirm understanding, validate approach, fill gaps |
+| **Asset Clarifications** | During content generation | Persona confirmation, tone, specific requirements |
+
+**Rules:**
+- Never more than 5 questions per gate
+- Always show findings/context before asking
+- Use structured options (checkbox format)
 
 ## Guidelines to Follow
 
+### Research Rules
+- **Research-local-first**: Always check `/research/` directory and prior components before using WebSearch
+- **Annotate sources**: Note whether information came from local documents, prior components, or web search
+- **Fill gaps only**: WebSearch is for gaps not found in local sources
+
 ### Messaging Rules
-- **Always adapt to altitude**: Calibrate language depth and technical detail to the target persona
-- **Emphasize outcomes over features**: Focus on business impact and differentiated value
-- **Maintain consistency**: Ensure messaging aligns across all elements and doesn't contradict positioning
+- **Derived, not invented**: All messaging traces back to foundational components
+- **Adapt to altitude**: Calibrate language depth and technical detail to the target persona
+- **Outcomes over features**: Focus on business impact and differentiated value
+- **Maintain consistency**: Messaging must not contradict prior components
 
 ### Content Generation Rules
 - **One asset per file**: Each content piece gets its own markdown file in `/assets/[descriptor]/`
 - **Follow skill templates**: Use the exact output format specified in the loaded skill
-- **Include evaluation**: Always assess generated content against the skill's evaluation criteria before finalizing
+- **Include evaluation**: Always assess generated content against the skill's evaluation criteria
 
 ### Workflow Rules
 - **Start in plan mode**: User should invoke plan mode before beginning any messaging task
-- **Clarify before writing**: Use AskUserQuestion to resolve ambiguities in the scenario
-- **Research before drafting**: Perform WebSearch for competitive/market intelligence before generating messaging brief
+- **Respect dependencies**: Only build components when prerequisites are complete
 - **Get plan approval**: User must accept the messaging brief before generating content assets

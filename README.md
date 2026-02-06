@@ -19,26 +19,45 @@ The tl;dr - fork it, tune to your market, write to your message, generate dope c
 
 *I said who's house? Your house!*
 
+## Getting Started
+
+Claude Message requires in-depth messaging across a number of components. You can inspect the files with instructions in `/messaging` to customize, or run a progressive workflow that will bootstrap the system.
+
+Run the orchestrator to guide you through:
+
+```
+/messaging-orchestrator
+```
+
+The orchestrator grabs existing messaging documents, performs outside research, and asks questions in a sequence – while tracking what's complete and recommends what to build next. Components are built in a predefined sequence to get the facts, the foundation, and the flair in the right order:
+
+```
+Profile → Purpose → Portfolio → Proposition → Position → Pitch → People → Proof → Preferences
+```
+
+Once your Messaging House is complete, the system will use your positioning and messaging as the context engine for content generation.
+
 ## How it Works
 
-The contents of this repository form the foundational architecture for your own custom messaging system. Your business is dynamic, your messaging must be too.
+This repository is your messaging system for creating clear and compelling content tuned to your market. Your business is dynamic, your messaging must be too.
 
 ### Messaging House
 
-The Messaging House is a structured model of your positioning and messaging. It covers every aspect of your market space, product offering, and go-to-market engine. The core components include:
+The Messaging House is a structured model of your positioning and messaging. Components are built progressively—each one extracts context from prior components and adds new context for what comes next.
 
-- Purpose: your vision and mission
-- Profile: your company foundation
-- Position: your market space
-- Proposition: your unique value
-- Pitch: your differentiated narrative
-- People: your target audience
-- Portfolio: your market offering
-- Proof: your evidence of value
-- Plays: your go-to-market
-- Preferences: your brand voice
+| # | Component | Purpose | Depends On |
+|---|-----------|---------|------------|
+| 1 | Profile | Company facts and foundation | — |
+| 2 | Purpose | Vision and mission | Profile |
+| 3 | Portfolio | Products and solutions | Profile |
+| 4 | Proposition | Unique value | Profile, Purpose, Portfolio |
+| 5 | Position | Market landscape | All prior |
+| 6 | Pitch | Strategic narrative | All prior |
+| 7 | People | Target audience | Profile, Portfolio, Proposition, Position |
+| 8 | Proof | Evidence of value | Proposition, Profile |
+| 9 | Preferences | Brand voice | All prior (derived) |
 
-Within the components, there are specific elements that may contain multiple profiles. To ensure relevancy, carve out dedicated profiles for:
+Within the components, there are specific elements that may contain multiple profiles. Carve out dedicated profiles for:
 
 - Categories
 - Competitors
@@ -76,15 +95,48 @@ I added an `asset-reader` subagent that reads and grades each generated asset af
 
 Fork this repository or copy the contents into your own Claude Code environment.
 
-Edit the markdown files in the root `messaging` directory to design your Messaging House. There is one markdown file for each element, which includes a number of Messaging Blocks. Each block is complemented with helpful instructions, tips, and format guidance. These are just suggestions, make it yours!
+### Step 1: Add Your Research
 
-Review the contents of each Skill in the `.claude/skills/` directory. There is a working markdown file for each included Skill, but you may want to customize the instructions and output format template, and/or provide your own examples for additional reference.
+Drop existing messaging documents into the `/research/` directory. The system will scan this folder first before searching externally. Include anything you have:
 
-Review the contents of each Command in the `.claude/commands/` directory. There is a working markdown file for each included Command, but you may want to provide your own instructions.
+- Pitch decks and sales presentations
+- Existing positioning documents
+- Competitor analysis
+- Customer research or interview notes
+- Product briefs or PRDs
 
-Once you are comfortable with the Messaging House and Messaging Skills contents, edit the main `CLAUDE.md` file to tune your writing profile and exactly how Claude Code interacts with the system. 
+### Step 2: Configure Your Writing Profile
 
-It is a lot of work to customize this system to your company messaging. Hopefully a lot of this already exists in some form or fashion, so it's a matter of organization and polish. If this doesn't exist, it's worth the exercise to get this into a good place regardless of your use of this repository. 
+Edit `CLAUDE.md` to set your writing profile—role, company, stage, and market. This shapes how Claude approaches all messaging work.
+
+### Step 3: Build Your Messaging House
+
+Run the orchestrator to build components progressively:
+
+```
+/messaging-orchestrator
+```
+
+The orchestrator will guide you through each component in sequence, extracting from your research documents, asking clarifying questions, and generating structured output.
+
+Alternatively, edit the markdown files in `/messaging/` directly. Each file includes instructions, tips, and format guidance for each block.
+
+### Step 4: Generate Content
+
+Once your Messaging House is complete, use Skills to generate assets:
+
+```
+/email-copywriting
+/social-copywriting
+/blog-copywriting
+/brief-copywriting
+```
+
+Content will automatically inherit your positioning, voice, and messaging.
+
+### Optional: Customize Skills and Commands
+
+Review `.claude/skills/` to customize output formats, evaluation criteria, or add your own examples. Review `.claude/commands/` to adjust research task instructions. 
 
 ## Your Writing Profile
 
@@ -122,6 +174,7 @@ I primarily encourage you to take this as-is and make it yours. But I do welcome
 
 ## History
 
+Version 0.2 (2026-02-06) - system bootstrap
 Version 0.1 (2026-01-16) - initial drop
 
 ## Credits
